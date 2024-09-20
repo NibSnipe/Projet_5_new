@@ -1,0 +1,48 @@
+.error-404 {
+
+        display: flex;
+        flex-direction: column;
+        gap: 139px;
+        margin-top: 139px;
+        margin-bottom: 139px;
+        align-items: center;
+    
+        @media (max-width : 425px){
+            gap: 113px;
+        }
+    
+        h2 {
+            color: rgba(224, 12, 12, 0.637);
+            font-size: 210px;
+            font-weight: 700;
+            margin: 0;
+    
+            @media (max-width : 425px){
+                font-size: 96px;
+            }
+        }
+    
+        p {
+            margin: 0;
+            font-size: 36px;
+            color: rgba(224, 12, 12, 0.637);
+            text-align: center;
+            font-weight: 500;
+    
+            @media (max-width : 425px){
+                font-size: 18px;
+            }
+        }
+    
+        .return-link {
+            color: black;
+            font-size: 18px;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 500;
+    
+            @media (max-width : 425px){
+                font-size: 14px;
+            }
+        }       
+}

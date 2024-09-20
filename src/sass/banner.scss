@@ -1,0 +1,23 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    position: relative;
+
+    .banner-img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        filter: brightness(0.5);
+    }   
+
+    h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        color: white;
+        position: absolute;
+        
+    }
+}

@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    padding:0 5rem;
+    margin-top: 50px;
+
+    ul { 
+        display: flex;
+        gap: 2rem;
+        a {
+            text-decoration: none;
+            color: #000;
+            &.underline {
+                text-decoration: underline;
+            }
+        }
+        li {
+            list-style: none;
+        }
+    }
+}
