@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import chevron from "../assets/images/chevron.svg";
-import  "../sass/Collapse.scss";
+import  "../sass/collapse.scss";
 
 
 const Collaspe = ({ title, children }) => {

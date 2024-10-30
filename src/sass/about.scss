@@ -1,0 +1,31 @@
+.aboutMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+
+  
+  /*** MEDIA QUERIES ***/
+  
+  /* (768PX AND LESS TABLET) */
+  @media (max-width: 768px) {
+    .about {
+      padding: 0rem 1.25rem 0rem 1.25rem;
+      gap: 1.5rem;
+    }
+  
+    .aboutHeadline {
+      aspect-ratio: 3.018;
+      border-radius: 10px;
+  
+      .aboutHeadlineBackground {
+        height: 100%;
+      }
+    }
+  
+    .aboutMenu {
+      width: 100%;
+    }
+  }
