@@ -11,22 +11,21 @@ const Collaspe = ({ title, children }) => {
       }
 
     return (
-        <div>
-              <div className={`collapse ${isOpen ? "open" : ""}`}>
-      <div className="collapse-header" onClick={toggleCollapse}>
-        <h3>{title}</h3>
-        <img
-          src={chevron}
-          alt="Chevron"
-          className={`chevron ${isOpen ? "down" : "up"}`}
-        />
+      <div className= {`collapse-container ${isOpen ? 'open' : ''}`}>
+      <div className={"collapse-title"}>
+          <h3>{title}</h3>
+          <img 
+          onClick={toggleCollapse}
+          src= {chevron} 
+          alt="chevron" 
+          className={`chevron ${isOpen ? "open" : ""}`}
+          />
       </div>
-      <div className={`collapse-content ${isOpen ? "open" : ""}`}>
-        <div className="content-wrapper">{children}</div>
+      <div className="collapse-content">
+          <ul>{children}</ul>
       </div>
-    </div>  
-        </div>
-    );
+  </div>
+);
 };
 
 

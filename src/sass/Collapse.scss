@@ -1,99 +1,51 @@
-.collapse {
-    margin-bottom: 2rem;
-    border-radius: 5px;
-    overflow: hidden;
+.collapse-container{
     width: 100%;
-  
-    .collapse-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem 0.5rem 0.75rem;
-      background-color: #ff6060;
-      cursor: pointer;
-  
-      h3 {
-        margin: 0;
-        color: #ffffff;
-        font-size: 22px;
-        line-height: 34px;
-      }
-  
-      .chevron {
-        width: 24px;
-        height: 24px;
-        transform: rotate(0deg);
-        transition: transform 0.3s ease;
-  
-        &.down {
-          transform: rotate(-180deg);
-        }
-      }
-    }
-  
-    .collapse-content {
-      max-height: 0;
-      background-color: rgba(246, 246, 246, 0.45);
-      transition: max-height 0.4s ease-in-out;
-      padding: 0 1rem;
-      overflow: hidden;
-  
-      .content-wrapper {
-        opacity: 0;
-        transform: translateY(-80px);
-        transition:
-          opacity 0.4s ease-in-out,
-          transform 0.4s ease-in-out;
-      }
-  
-      p,
-      ul {
-        margin: 0;
-        padding: 1rem 0;
-      }
-  
-      ul {
-        list-style: none;
-      }
-    }
-  
+
     &.open {
-      .collapse-content {
-        max-height: 300px;
-  
-        .content-wrapper {
-          opacity: 1;
-          transform: translateY(0);
+        .collapse-content{
+            max-height: 1000px;
+            transition: max-height 3s ease;
+            padding: 20px 20px 20px 0;
         }
-      }
     }
-  }
-  
-  /*** MEDIA QUERIES ***/
-  
-  /* (768PX AND LESS TABLET) */
-  @media (max-width: 768px) {
-    .collapse {
-      margin-bottom: 1.5rem;
-      .collapse-header {
-        padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-  
-        h3 {
-          font-size: 13px;
-          line-height: 18px;
+
+    .collapse-title {
+        align-items: center;
+        padding: 10px 20px 10px 15px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #ff6060;
+        @media (max-width : 425px) {
+            padding: 10px ;
         }
-  
-        .chevron {
-          width: 16px;
-          height: 16px;
-        }
-      }
-  
-      .collapse-content {
-        p,
-        ul {
-          font-size: 12px;
-        }
-      }
     }
-  }
+
+    h3{
+        color: white;
+        font-size: 18px;
+        @media (max-width : 425px) {
+            font-size: 13px;
+        }
+    }
+
+    .chevron{
+        width: 25px;
+        height: 25px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+        &.open{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .collapse-content{
+        
+        line-height: 25px;
+        border-radius: 10px;
+        background-color: rgb(241, 237, 237) ;
+        overflow: hidden;
+        max-height: 0;
+    }

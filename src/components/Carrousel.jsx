@@ -22,10 +22,9 @@ const Carrousel = ({ images }) => {
     }
 
 
-
     return (
         <div>
-                    <div className='carrousel'>
+            <div className='carrousel'>
             {!singleImage && ( // Affichage des chevrons si plusieurs images
                 <div className='btn-slide'>
                     <img src={left} className='left' alt='left arrow' onClick={prevSlide}/>

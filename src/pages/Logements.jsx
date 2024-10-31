@@ -4,6 +4,7 @@ import Carrousel from '../components/Carrousel';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
 import Tags from '../components/Tags';
+import "../sass/logements.scss";
 
 
 
@@ -18,11 +19,10 @@ const Logements = () => {
 
     return (
         <div>
-            { picture.map((img) => <img src={ img } alt={""} key={ img } />) }
             <p>looollo { id }</p>
-            <p> { logement.description }</p>
-
+            <div className="carrousel-container">
             <Carrousel images={logement.pictures} />
+            </div>
 
             <div className="all-info-container">
                 <div className="left-container">
@@ -38,16 +38,14 @@ const Logements = () => {
                         <img src={logement.host.picture} alt = {"photo de " + logement.host.name}></img>
                     </div>
                     <div className="rating-container">
-                        <Rating rating = {appartement.rating}/>
+                        <Rating rating = {logement.rating}/>
                     </div>
                 </div>    
             </div>
-
             <div className="collapse-description-container">
             <Collapse title="Description">  { logement.description }  </Collapse>
             <Collapse title="Équipements">  { logement.equipments }  </Collapse>
             </div>
-
         </div>
     );
 };
