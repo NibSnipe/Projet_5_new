@@ -1,10 +1,11 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import logPages from "../data/logements.json";
 import Carrousel from '../components/Carrousel';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
 import Tags from '../components/Tags';
 import "../sass/logements.scss";
+import Error404 from '../pages/Error404';
 
 
 
@@ -15,11 +16,16 @@ const logId = (id) => {
 const Logements = () => {
     const { id } = useParams();
     const logement = logId(id);
+    if (!logement){
+        useNavigate("/404") 
+        return <Error404 />
+    }
+
     const picture = logement.pictures;
+ 
 
     return (
         <div>
-            <p>looollo { id }</p>
             <div className="carrousel-container">
             <Carrousel images={logement.pictures} />
             </div>
@@ -44,7 +50,7 @@ const Logements = () => {
             </div>
             <div className="collapse-description-container">
             <Collapse title="Description">  { logement.description }  </Collapse>
-            <Collapse title="Équipements">  { logement.equipments }  </Collapse>
+            <Collapse title="Équipements">  { logement.equipments.map((equipment, index) => ( <li key={index}>{equipment}</li> )) }  </Collapse>
             </div>
         </div>
     );

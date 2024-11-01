@@ -1,15 +1,17 @@
 .aboutMenu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 80%;
+    align-content: center;
 }
 
-
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 80%;
+}
   
-  /*** MEDIA QUERIES ***/
   
-  /* (768PX AND LESS TABLET) */
   @media (max-width: 768px) {
     .about {
       padding: 0rem 1.25rem 0rem 1.25rem;
@@ -27,5 +29,11 @@
   
     .aboutMenu {
       width: 100%;
+
+      @media (max-width  : 425px) {
+        gap: 25px;
+        margin-bottom: 25px;
+      }
+
     }
   }
