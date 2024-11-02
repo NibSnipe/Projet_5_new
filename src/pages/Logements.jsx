@@ -1,11 +1,10 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import logPages from "../data/logements.json";
 import Carrousel from '../components/Carrousel';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
 import Tags from '../components/Tags';
 import "../sass/logements.scss";
-import Error404 from '../pages/Error404';
 
 
 
@@ -16,13 +15,10 @@ const logId = (id) => {
 const Logements = () => {
     const { id } = useParams();
     const logement = logId(id);
-    if (!logement){
-        useNavigate("/404") 
-        return <Error404 />
-    }
 
-    const picture = logement.pictures;
- 
+    if (!logement) {
+        return <Navigate to="/Error404" replace />;
+    } 
 
     return (
         <div>
