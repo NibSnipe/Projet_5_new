@@ -1,84 +1,83 @@
 .carrousel {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 415px;
+  margin: auto;
+  border-radius: 25px;
+  overflow: hidden;
+
+  @media (max-width: 425px) {
+    height: 225px;
+  }
+
+  .slides-container {
+    display: flex;
+    transition: transform 0.6s ease;
     width: 100%;
-    height: 415px;
-    margin: auto;
-    border-radius: 25px;
-    overflow: hidden; 
+    height: 100%;
 
-    @media (max-width : 425px) {
-        height: 225px;
+    .slides {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    
-    .slides-container{
-        display: flex; 
-        transition: transform 0.6s ease; 
-        width: 100%;
-        height: 100%;
+  }
 
-       
-        .slides {
-            flex: 0 0 100%;
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover;
-        }
-    }
-   
-    .btn-slide {
-        z-index: 1;
-        width: 100%;
-        cursor: pointer;
+  .btn-slide {
+    z-index: 1;
+    width: 100%;
+    cursor: pointer;
 
-        .left {
-            padding-left: 32px;
-            position: absolute;
-            top: 45%;
-            z-index: 1;
+    .left {
+      padding-left: 32px;
+      position: absolute;
+      top: 45%;
+      z-index: 1;
 
-            @media (max-width : 425px) {
-                width: 24px;
-                height: 35px;
-                left: -5%;
-            }
+      @media (max-width: 425px) {
+        width: 24px;
+        height: 35px;
+        left: -5%;
+      }
 
-            @media (max-width : 375px) {
-                width: 24px;
-                height: 35px     
-            }   
-        }
-
-        .right {
-            position: absolute;
-            right: 4%;
-            top: 45%;
-            z-index: 1;
-
-            @media (max-width : 375px) {
-                width: 24px;
-                height: 35px;
-                right: 5%;
-            }
-
-            @media (max-width : 425px) {
-                width: 24px;
-                height: 35px;
-            }
-        } 
+      @media (max-width: 375px) {
+        width: 24px;
+        height: 35px;
+      }
     }
 
-    .imageNumber {
-        bottom: 10%;
-        left: 47%;
-        position: absolute;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 15px;
-        padding: 5px 10px;
+    .right {
+      position: absolute;
+      right: 4%;
+      top: 45%;
+      z-index: 1;
 
-        @media (max-width : 375px) {
-            font-size: 12px;
-            bottom: 8%;
-        }
+      @media (max-width: 375px) {
+        width: 24px;
+        height: 35px;
+        right: 5%;
+      }
+
+      @media (max-width: 425px) {
+        width: 24px;
+        height: 35px;
+      }
     }
+  }
+
+  .imageNumber {
+    bottom: 10%;
+    left: 47%;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 5px 10px;
+
+    @media (max-width: 375px) {
+      font-size: 12px;
+      bottom: 8%;
+    }
+  }
 }
